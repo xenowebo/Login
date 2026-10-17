@@ -193,8 +193,8 @@
       <p class="error-message" id="form-error" role="alert" hidden></p>
       <button class="submit-button" type="submit">Log in</button>
     </form>
-    <p class="signup">Don’t have an account? <a href="../sign-up/">Create an account</a></p>
-    <a class="back-home" href="../">← Back to home</a>
+    <p class="signup">Don’t have an account? <a href="https://xenowebo.github.io/Sign-up/">Create an account</a></p>
+    <a class="back-home" href="https://xenowebo.github.io/Home">← Back to home</a>
   </main>
 
   <script>
@@ -237,8 +237,8 @@
     const requestedDestination = new URLSearchParams(window.location.search).get("next");
     const safeDestination = requestedDestination && requestedDestination.startsWith("/") && !requestedDestination.startsWith("//")
       ? requestedDestination
-      : "../";
-    document.querySelector(".signup a").href = `../sign-up/?next=${encodeURIComponent(safeDestination)}`;
+      : "https://xenowebo.github.io/Home";
+    document.querySelector(".signup a").href = `https://xenowebo.github.io/Sign-up/?next=${encodeURIComponent(safeDestination)}`;
 
     loginForm.addEventListener("submit", async (event) => {
       event.preventDefault();
